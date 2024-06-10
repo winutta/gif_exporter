@@ -1,0 +1,230 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    touch-action: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    position: relative;
+    /* background-clip: content-box; */
+}
+
+html,
+body
+{
+    margin: 0;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.webgl
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#root
+{
+    /* margin: 10px; */
+    /* padding: 10px; */
+    /* width: auto; */
+    /* height: auto; */
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.container
+{
+    /* padding: 10px;  */
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    /* width: auto; */
+    /* height: auto; */
+}
+
+.section1
+{
+    background-color: lightblue;
+    flex: 1;
+    width: 100%;
+    /* min-width:750px; */
+    height: 70%;
+    /* flex-shrink: 2; */
+    /* position: relative;  */
+    /* position is static by default.. */
+}
+
+.section2
+{
+    background-color: lightpink;
+    height: 30%;
+    width: 100%;
+    padding: 5px;
+    /* flex-shrink: 1; */
+    /* background-clip: padding-box; */
+    
+    display: flex;
+    /* gap: 5px; */
+    flex-direction: column;
+
+
+
+}
+
+@media screen and (min-width: 700px){
+    .section1
+    {
+        height: 100%;
+        width: 70%;
+    }
+    .section2
+    {
+        height: 100%;
+        width: 30%;
+    }
+}
+
+.segment
+{
+    box-sizing: border-box;
+    background-clip: content-box;
+    display: block;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80px;
+}
+
+.green
+{
+    background-color: lightgreen;
+}
+
+.yellow
+{
+    background-color: lightyellow;
+}
+
+
+
+.propertyTitle
+{
+    height: 100%;
+    /* width: 100px; */
+    position: absolute;
+    padding: 5px;
+    background-clip: content-box;
+    /* float: right; */
+    left: 0px;
+    background-color: lightsalmon;
+}
+
+.slider
+{
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    padding: 5px;
+    background-clip: content-box;
+    /* float: right; */
+    right: 0px;
+    background-color: lightseagreen;
+}
+
+.sliderInteractives
+{
+    width: 100px;
+    height: 100%;
+    right: 0px;
+    position: absolute;
+
+    background-color: lightcyan;
+}
+
+.sliderBackground
+{
+    background-color: lightskyblue;
+}
+
+.sliderForeground
+{
+    position: absolute;
+    left:0px;
+    top: 0px;
+    background-color: burlywood;
+    overflow: hidden;
+
+}
+
+.colorPicker
+{
+    width: 100px;
+    height: 100px;
+}
+
+
+#viewingCanvas
+{
+    width:100px;
+    height: 100px;
+    /* going to be reseting width and height anyways */
+    position: absolute;
+    left:10px;
+    top: 10px;
+    background-color: rgb(135, 250, 202);
+}
+
+#renderingCanvas
+{
+    width:32px;
+    height: 32px;
+    /* going to be reseting width and height anyways */
+    position:absolute;
+    left:110px;
+    top:10px;
+    background-color: rgb(250, 169, 135);
+}
+
+#canv2
+{
+    position: absolute;
+    left:2500px;
+    top:100px;
+}
+
+#export
+{
+    /* width: 20px; */
+    height: 20px;
+    background-color: lightskyblue;
+}
+
+#export_settings_desc
+{
+    display: block;
+}
+
+.trial
+{
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+    left: 70% !important;
+}
+/* #canv
+{
+    width: 100px;
+    height: 100px;
+} */
