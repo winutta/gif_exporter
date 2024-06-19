@@ -123,7 +123,8 @@ function CanvasSettings({id,width_val,height_val,children}){
   const viewer = false;
 
   useEffect(()=>{
-    renderer_ref.current.resizeCanvas(numWidth,numWidth)
+    renderer_ref.current.resizeCanvas(numWidth,numHeight)
+    // console.log(renderer_ref.current.getSize());
 
     if(setup.viewer){
       //get limits of container.
@@ -282,6 +283,26 @@ function ExportButton({id,width,height,children}){
   )
 }
 
+function ResetKeyframesButton({ id, width, height, children }) {
+
+  useEffect(() => {
+  }, [])
+
+
+  function onDivClick() {
+    if (window.reset_keyframes) {
+      window.reset_keyframes();
+    }
+  }
+
+
+  return (
+    <div id={id} width={width} height={height} onClick={onDivClick}>
+      Unset Keyframes at Time
+    </div>
+  )
+}
+
 let sliders = [<SliderInteractives key={0}></SliderInteractives>,<SliderInteractives key = {1}></SliderInteractives>]
 
 // use as 
@@ -316,6 +337,7 @@ export default function MyApp() {
           <ExportButton id = "export" width = "20" height = "20"></ExportButton>
           <CanvasSettings width_val = "400" height_val = "300"></CanvasSettings>
           <ExportSettings id = "export_settings" start_val = {0} end_val = {3}></ExportSettings>
+          {/* <ResetKeyframesButton id = "reset_keyframes"></ResetKeyframesButton> */}
         </div>
       </div>
     </>

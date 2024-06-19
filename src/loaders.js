@@ -28,15 +28,33 @@ var CCapture = window.CCapture;
 var capturer = new CCapture({format: "gif", workersPath: "./ccapture.js/src/"});
 // capturer.start();
 
+
+const extensionConfig = {
+    id: 'hello-world-extension',
+    toolbars: {
+        global(set, studio) {
+            set([
+                {
+                    type: 'Icon',
+                    title: 'Example Button',
+                    svgSource: '👁',
+                },
+            ])
+        },
+    },
+    panes: [],
+}
+studio.extend(extensionConfig)
 studio.initialize();
 // let container = document.getElementById("section1")
 // console.log(container);
 
 
 
-const project = getProject('All')
+var project = getProject('All')
 
-const sheet = project.sheet('Animated scene')
+var sheet = project.sheet('Animated scene')
+// console.log(project)
 
 console.log("studio:", studio, "project: ", project, )
 
@@ -167,6 +185,10 @@ function export_animation(){
 }
 
 window.export_animation = export_animation;
+
+
+
+
 
 // on animation finish
 function stop_capture(val){
@@ -346,6 +368,57 @@ export function loadAssets(timeObject,scene,camera) {
             scale: types.number(1,{range: [0,10]})
         }),
       })
+
+
+    function reset_keyframes() {
+        // window.localStorage.removeItem("theatre-0.4.persistent")
+
+        // studio.initialize();
+        // let container = document.getElementById("section1")
+        // console.log(container);
+
+        // // iterate through keyframes
+
+        // console.log(val(torusKnotObj.props));
+
+        // var props = val(torusKnotObj.props);
+
+        // var keyframes = [];
+
+
+        // for (const property in props){
+        //     if (typeof props[property] == "object") {
+                
+        //     } else {
+
+        //     }
+        //     console.log(`${property}: ${props[property]}`);
+        // }
+
+        // var keyframes = sheet.sequence.__experimental_getKeyframes(torusKnotObj.props.transform.position.x);
+        // console.log(keyframes);
+
+        studio.transaction(({ set, unset }) => {
+            unset(torusKnotObj.props);
+        })
+
+        // project = getProject('All')
+
+        // sheet = project.sheet('Animated scene')
+
+        // studio.ui.hide();
+        // studio.ui.restore();
+
+
+
+    }
+
+    window.reset_keyframes = reset_keyframes;
+
+
+    // studio.transaction(({set,unset})=>{
+    //     unset(torusKnotObj.props)
+    // })
 
     function makeInvisible(){
 		for(var mesh in meshes){

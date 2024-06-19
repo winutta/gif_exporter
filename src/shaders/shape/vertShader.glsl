@@ -85,7 +85,9 @@ void main()
 
   vec3 norm = normalize(position);
   // n= normal;
-  vec3 offset = normal*h/26.*1.;
+  // vec3 offset = normal*h/26.*1.;
+  vec3 offset = norm*h/26.*1.;
+
   // offset = vec3(0.);
 
   // pos = (modelMatrix*vec4(position,1.0)).xyz;

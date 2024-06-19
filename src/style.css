@@ -21,6 +21,7 @@ body
     width:100%;
     height: 100%;
     overflow: hidden;
+    font:11px -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe Editor", HelveticaNeue-Light, Ubuntu, "Droid Sans", sans-serif;
 }
 
 .webgl
@@ -206,9 +207,49 @@ body
 
 #export
 {
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 3.5px;
     /* width: 20px; */
     height: 20px;
     background-color: lightskyblue;
+
+}
+
+#export:hover {
+    /* width: 20px; */
+    /* height: 20px; */
+    background-color: rgb(91, 157, 197);
+
+}
+
+#export:active {
+    /* width: 20px; */
+    /* height: 20px; */
+    background-color: rgb(91, 197, 114);
+
+}
+
+#reset_keyframes {
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 3.5px;
+    height: 20px;
+    background-color: lightskyblue;
+}
+
+#reset_keyframes:hover {
+    /* width: 20px; */
+    /* height: 20px; */
+    background-color: rgb(91, 157, 197);
+
+}
+
+#reset_keyframes:active {
+    /* width: 20px; */
+    /* height: 20px; */
+    background-color: rgb(91, 197, 114);
+
 }
 
 #export_settings_desc
